@@ -141,7 +141,7 @@
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(7, 1fr); /* 5 equal columns */
     gap: 1rem;
     padding: 0.5rem;
 }
@@ -221,10 +221,61 @@
     color: #3182ce;
     display: inline-block;
 }
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Individual card styling */
+.category-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    position: relative;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Icon */
+.category-icon {
+    font-size: 3rem;
+    color: #43cea2;
+    margin-bottom: 1rem;
+}
+
+/* Category Title */
+.category-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Subtle line */
+.category-line {
+    width: 50px;
+    height: 3px;
+    background: #43cea2;
+    margin: 0.75rem auto 0;
+}
 </style>
 
 @section('head')
     <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @endsection
 
@@ -285,37 +336,49 @@
         </div>
     </div>
 
-    <!-- Products Section -->
-    <div class="products-overview">
-        <h3 class="products-overview-title">Products Overview</h3>
-        <div class="products-grid">
-            @if(isset($products) && $products->count() > 0)
-                @foreach($products as $product)
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">Category {{ $product->category_id }}</div>
-                        <div class="product-price">
-                            <span>₱</span>{{ number_format($product->price, 2) }}
-                        </div>
-                        <h4 class="product-name">{{ $product->name }}</h4>
-                        <div class="m-t text-right">
-                            <span class="stock-badge badge-{{ $product->stock_quantity > 0 ? 'success' : 'danger' }}">
-                                Stock: {{ $product->stock_quantity }}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            @else
-                <div class="col-12">
-                    <div class="alert alert-info">No products available.</div>
-                </div>
-            @endif
+    <!-- Added Margin Between Sections -->
+    <div class="mt-5"></div>
+
+    <div class="wrapper wrapper-content">
+    <!-- Cards Container -->
+    <div class="card-container">
+        <!-- Fresh Flowers -->
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fa fa-leaf"></i>
+            </div>
+            <h3 class="category-title">Fresh Flowers</h3>
+            <div class="category-line"></div>
+        </div>
+
+        <!-- Dried Flowers -->
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fa fa-sun-o"></i>
+            </div>
+            <h3 class="category-title">Dried Flowers</h3>
+            <div class="category-line"></div>
+        </div>
+
+        <!-- Bouquet Flowers -->
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fa fa-gift"></i>
+            </div>
+            <h3 class="category-title">Bouquet Flowers</h3>
+            <div class="category-line"></div>
+        </div>
+
+        <!-- Artificial Flowers -->
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fa fa-paint-brush"></i>
+            </div>
+            <h3 class="category-title">Artificial Flowers</h3>
+            <div class="category-line"></div>
         </div>
     </div>
+</div>
 </div>
 
 @endsection

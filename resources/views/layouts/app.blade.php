@@ -223,7 +223,7 @@
                     10GB of <strong>250GB</strong> Free.
                 </div>
                 <div>
-                    <strong>Copyright</strong> Kylha &copy; 2024-2025
+                    <strong>Copyright</strong> Alcel-Ghenly &copy; 2024-2025
                 </div>
             </div>
 
