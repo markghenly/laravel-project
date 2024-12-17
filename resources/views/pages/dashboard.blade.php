@@ -232,7 +232,7 @@
     <div class="row g-4">
         <!-- Orders Card -->
         <div class="col-md-4">
-            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);">
+            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg,rgb(173, 232, 36) 0%, #185a9d 100%);">
                 <div class="position-relative z-2">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <span class="stat-label text-white">Orders</span>
@@ -250,7 +250,7 @@
 
         <!-- Products Card -->
         <div class="col-md-4">
-            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg,rgb(200, 137, 42) 0%,rgb(88, 56, 206) 100%);">
                 <div class="position-relative z-2">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <span class="stat-label text-white">Products</span>
@@ -268,7 +268,7 @@
 
         <!-- Customers Card -->
         <div class="col-md-4">
-            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);">
+            <div class="stat-card h-100 p-4" style="background: linear-gradient(135deg,rgb(49, 112, 47) 0%,rgb(43, 255, 71) 100%);">
                 <div class="position-relative z-2">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <span class="stat-label text-white">Customers</span>

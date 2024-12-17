@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LARAVEL SHOP</title>
+    <title>Flower_SHOP</title>
 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
@@ -17,7 +17,7 @@
 
     <style>
     .navbar-default {
-        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        background: linear-gradient(135deg,rgb(43, 34, 89) 0%,rgb(9, 56, 247) 100%);
         border: none;
     }
 
